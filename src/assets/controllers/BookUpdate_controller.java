@@ -65,7 +65,7 @@ public class BookUpdate_controller implements Initializable   {
         kategori = choicebox.getItems().get(choicebox.getSelectionModel().getSelectedIndex());
         jumlah = spinner.getValue();
         tanggalPublish = datepicker.getValue().toString();
-        Buku buku =new Buku(isbn,judul,penulis,publisher,kategori,jumlah,tanggalPublish,100);
+        Buku buku =new Buku(isbn,judul,penulis,publisher,kategori,jumlah,tanggalPublish,jumlah);
         buku.setId(this.buku.getId());
         return buku;
 
