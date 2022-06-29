@@ -1,0 +1,38 @@
+
+.button{
+    -fx-padding: 10px 20px;
+    -fx-background-color: #764AF1;
+    -fx-background-radius: 25px;
+    -fx-text-fill:white;
+}
+.button:hover{
+    -fx-background-color: #9772FB;
+  
+}
+
+.textField{
+    -fx-background-color:transparent;
+    -fx-border-color: transparent transparent black transparent ;
+    -fx-border-width: 1px;
+}
+.textField:focus{
+    -fx-border-color: transparent transparent gray transparent;
+}
+.container{
+    -fx-background-color: #F2F2F2;
+}
+.left{
+    -fx-background-color: #764AF1;
+}
+.menu{
+    -fx-background-color: #a766fa;
+
+}
+.menu:hover{
+    -fx-background-color : #B573f7;
+}
+.top{
+    -fx-background-color: #6f00ff;
+}
+
+

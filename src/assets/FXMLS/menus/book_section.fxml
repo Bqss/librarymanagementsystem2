@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assets.controllers.Books_controller">
+   <children>
+      <AnchorPane prefHeight="111.0" prefWidth="1462.0" styleClass="left">
+         <children>
+            <Button alignment="CENTER_RIGHT" layoutX="309.0" layoutY="14.0" mnemonicParsing="false" onAction="#addBook" prefHeight="36.0" prefWidth="155.0" style="-fx-border-color: white; -fx-border-width: 1px; -fx-border-radius: 15px;" text="Tambahkan buku" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <ImageView fitHeight="24.0" fitWidth="32.0" layoutX="316.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/icons/add.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Button alignment="CENTER_RIGHT" layoutX="496.0" layoutY="14.0" mnemonicParsing="false" onAction="#hapusBuku" prefHeight="36.0" prefWidth="123.0" style="-fx-border-color: white; -fx-border-width: 1px; -fx-border-radius: 15px;" text="Hapus Buku" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <ImageView fitHeight="24.0" fitWidth="32.0" layoutX="503.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/icons/delete.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Button alignment="CENTER_RIGHT" layoutX="496.0" layoutY="62.0" mnemonicParsing="false" onAction="#updateBook" prefHeight="36.0" prefWidth="123.0" style="-fx-border-color: white; -fx-border-width: 1px; -fx-border-radius: 15px;" text="Edit buku" textAlignment="CENTER" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <ImageView fitHeight="24.0" fitWidth="32.0" layoutX="503.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/icons/edit.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Button alignment="CENTER_RIGHT" layoutX="309.0" layoutY="62.0" mnemonicParsing="false" onAction="#backToMenu" prefHeight="36.0" prefWidth="155.0" style="-fx-border-color: white; -fx-border-width: 1px; -fx-border-radius: 15px;" text="Back to meenu" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <ImageView fitHeight="24.0" fitWidth="32.0" layoutX="316.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/icons/back.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="79.0" fitWidth="155.0" layoutX="14.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/icons8-book-50.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="93.0" layoutY="31.0" prefHeight="17.0" prefWidth="139.0" text="Home / books" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+         </children></AnchorPane>
+      <AnchorPane layoutY="112.0" prefHeight="688.0" prefWidth="1462.0" styleClass="left">
+         <children>
+            <TableView fx:id="table" layoutX="4.0" layoutY="65.0" onMouseClicked="#setIndex" prefHeight="617.0" prefWidth="1453.0">
+              <columns>
+                <TableColumn fx:id="tc_id" minWidth="15.0" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="tc_isbn" minWidth="15.0" prefWidth="148.0" text="ISBN" />
+                  <TableColumn fx:id="tc_namabuku" minWidth="15.0" prefWidth="220.0" text="Nama Buku" />
+                  <TableColumn fx:id="tc_penulis" minWidth="15.0" prefWidth="207.0" text="Penulis" />
+                  <TableColumn fx:id="tc_publisher" minWidth="15.0" prefWidth="200.0" text="Publisher" />
+                  <TableColumn fx:id="tc_kategori" minWidth="15.0" prefWidth="200.0" text="Kategori" />
+                  <TableColumn fx:id="tc_tahunpublish" minWidth="15.0" prefWidth="195.0" text="Tahun publish" />
+                  <TableColumn fx:id="tc_jumlahbuku" minWidth="15.0" prefWidth="114.0" resizable="false" text="Jumlah buku" />
+                  <TableColumn fx:id="tc_tersisa" minWidth="15.0" prefWidth="93.0" text="Tersisa" />
+              </columns>
+            </TableView>
+            <TextField fx:id="tfSearch" layoutX="4.0" layoutY="14.0" prefHeight="36.0" prefWidth="848.0" style="-fx-border-radius: 15px; -fx-background-radius: 15px; -fx-border-color: purple; -fx-border-width: 1px; -fx-padding: 0 0 0 20px;" />
+            <ChoiceBox fx:id="choicebox" accessibleText="Pilih pencarian" layoutX="864.0" layoutY="14.0" prefHeight="36.0" prefWidth="165.0" style="-fx-border-radius: 15px; -fx-background-radius: 15px; -fx-border-color: purple; -fx-border-width: 1px;" />
+            <Button fx:id="search_btn" alignment="CENTER" contentDisplay="CENTER" layoutX="1039.0" layoutY="14.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="111.0" style="-fx-border-color: white; -fx-border-width: 1px; -fx-border-radius: 15px;" text="Search" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

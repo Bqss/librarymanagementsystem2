@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="693.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assets.controllers.Login_controller">
+   <children>
+      <Pane layoutX="4.0" layoutY="-6.0" prefHeight="400.0" prefWidth="693.0" style="-fx-background-color: transparent;" styleClass="container">
+         <children>
+            <Label graphicTextGap="8.0" layoutX="491.0" layoutY="90.0" styleClass="text" text="Login" textOverrun="CLIP">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font></Label>
+            <Button layoutX="512.0" layoutY="293.0" mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="136.0" style="-fx-padding: 10px 20px; -fx-background-radius: 20px;" text="login" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
+            <PasswordField fx:id="tfPassword" layoutX="375.0" layoutY="224.0" prefHeight="40.0" prefWidth="273.0" promptText="Password" styleClass="textField">
+               <font>
+                  <Font size="14.0" />
+               </font></PasswordField>
+            <TextField fx:id="tfUsername" layoutX="375.0" layoutY="170.0" prefHeight="40.0" prefWidth="273.0" promptText="Username" styleClass="textField">
+               <font>
+                  <Font size="14.0" />
+               </font></TextField>
+            <ImageView fitHeight="32.0" fitWidth="25.0" layoutX="623.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/icons8-user-30.png" />
+               </image></ImageView>
+            <ImageView fitHeight="32.0" fitWidth="25.0" layoutX="623.0" layoutY="234.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/icons8-password-24.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="-9.0" layoutY="6.0" prefHeight="400.0" prefWidth="343.0" styleClass="left">
+               <children>
+                  <ImageView fitHeight="87.0" fitWidth="69.0" layoutX="122.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/icons8-book-90.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="51.0" layoutY="190.0" text="Library Management " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="121.0" layoutY="228.0" text="System" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Pane>
+   </children>
+</AnchorPane>

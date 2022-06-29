@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assets.controllers.member_controller">
+   <children>
+      <AnchorPane prefHeight="111.0" prefWidth="1462.0" styleClass="left">
+         <children>
+            <Button alignment="CENTER_RIGHT" layoutX="260.0" layoutY="62.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="155.0" style="-fx-border-color: white; -fx-border-width: 1px; -fx-border-radius: 15px;" text="Tambahkan buku" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <ImageView fitHeight="24.0" fitWidth="32.0" layoutX="267.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/icons/add.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Button alignment="CENTER_RIGHT" layoutX="429.0" layoutY="15.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="123.0" style="-fx-border-color: white; -fx-border-width: 1px; -fx-border-radius: 15px;" text="Hapus Buku" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <ImageView fitHeight="24.0" fitWidth="32.0" layoutX="436.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/icons/delete.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="260.0" layoutY="15.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="155.0" style="-fx-border-color: white; -fx-border-width: 1px; -fx-border-radius: 15px;" text="Edit buku" textAlignment="CENTER" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <ImageView fitHeight="24.0" fitWidth="32.0" layoutX="267.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/icons/edit.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="1293.0" layoutY="62.0" mnemonicParsing="false" onAction="#backToMenu" prefHeight="36.0" prefWidth="155.0" style="-fx-border-color: white; -fx-border-width: 1px; -fx-border-radius: 15px;" text="Back to meenu" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <ImageView fitHeight="24.0" fitWidth="32.0" layoutX="1301.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/icons/back.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="79.0" fitWidth="155.0" layoutX="14.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/icons8-member-50.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="100.0" layoutY="32.0" prefHeight="24.0" prefWidth="134.0" text="Home / Member" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <AnchorPane layoutY="112.0" prefHeight="688.0" prefWidth="1462.0" styleClass="left">
+         <children>
+            <TableView layoutX="4.0" layoutY="64.0" prefHeight="618.0" prefWidth="1453.0">
+              <columns>
+                <TableColumn editable="false" prefWidth="165.0" text="ID" />
+                  <TableColumn prefWidth="308.0" text="Nama" />
+                  <TableColumn prefWidth="112.0" text="Gender" />
+                  <TableColumn prefWidth="325.0" text="Adress" />
+                  <TableColumn prefWidth="274.0" text="Email" />
+                  <TableColumn prefWidth="268.0" text="No.Telefon" />
+              </columns>
+            </TableView>
+            <TextField layoutX="14.0" layoutY="14.0" prefHeight="36.0" prefWidth="848.0" style="-fx-border-radius: 15px; -fx-background-radius: 15px; -fx-border-color: white; -fx-border-width: 1px;" />
+            <ChoiceBox layoutX="871.0" layoutY="14.0" prefHeight="36.0" prefWidth="165.0" style="-fx-border-radius: 15px; -fx-background-radius: 15px; -fx-border-color: white; -fx-border-width: 1px;" />
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="1043.0" layoutY="14.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="111.0" style="-fx-border-color: white; -fx-border-width: 1px; -fx-border-radius: 15px;" text="Search" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

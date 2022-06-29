@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assets.controllers.Administrator_controller">
+   <children>
+      <AnchorPane prefHeight="147.0" prefWidth="1462.0" styleClass="left">
+         <children>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="1286.0" layoutY="90.0" mnemonicParsing="false" onAction="#backToMenu" prefHeight="36.0" prefWidth="155.0" style="-fx-border-color: white; -fx-border-width: 1px; -fx-border-radius: 15px;" text="Back to meenu" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <ImageView fitHeight="24.0" fitWidth="32.0" layoutX="1294.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/icons/back.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="79.0" fitWidth="155.0" layoutX="652.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/icons8-admin-50.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="742.0" layoutY="56.0" prefHeight="25.0" prefWidth="155.0" text="Home / Administrator" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <AnchorPane layoutY="148.0" prefHeight="652.0" prefWidth="1462.0" style="-fx-background-color: white;">
+         <children>
+            <TableView layoutX="703.0" layoutY="69.0" prefHeight="428.0" prefWidth="720.0">
+              <columns>
+                <TableColumn editable="false" prefWidth="165.0" text="ID" />
+                  <TableColumn prefWidth="308.0" text="Nama" />
+                  <TableColumn prefWidth="112.0" text="Gender" />
+                  <TableColumn prefWidth="325.0" text="Adress" />
+                  <TableColumn prefWidth="274.0" text="Email" />
+                  <TableColumn prefWidth="268.0" text="No.Telefon" />
+              </columns>
+            </TableView>
+            <Button alignment="CENTER_RIGHT" layoutX="153.0" layoutY="432.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="155.0" style="-fx-border-color: white; -fx-border-width: 1px; -fx-border-radius: 15px;" text="Tambahkan admin" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <ImageView fitHeight="24.0" fitWidth="32.0" layoutX="160.0" layoutY="438.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/icons/add.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Button alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="324.0" layoutY="432.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="155.0" style="-fx-border-color: white; -fx-border-width: 1px; -fx-border-radius: 15px;" text="Simpan perubahan" textAlignment="CENTER" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <ImageView fitHeight="24.0" fitWidth="32.0" layoutX="337.0" layoutY="437.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/icons/edit.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Button alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="494.0" layoutY="431.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="155.0" style="-fx-border-color: white; -fx-border-width: 1px; -fx-border-radius: 15px;" text="Hapus Administrator" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <ImageView fitHeight="24.0" fitWidth="32.0" layoutX="501.0" layoutY="437.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/icons/delete.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="29.0" layoutY="78.0" prefHeight="20.0" prefWidth="89.0" text="ID             : ">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="29.0" layoutY="132.0" prefHeight="20.0" prefWidth="89.0" text="Nama       : ">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="29.0" layoutY="178.0" prefHeight="20.0" prefWidth="79.0" text="Gender     : ">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="28.0" layoutY="226.0" prefHeight="20.0" prefWidth="89.0" text="Telefon     : ">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="29.0" layoutY="283.0" prefHeight="20.0" prefWidth="79.0" text="Alamat      : ">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="28.0" layoutY="338.0" prefHeight="17.0" prefWidth="89.0" text="Username : ">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="27.0" layoutY="389.0" prefHeight="17.0" prefWidth="89.0" text="Password  : ">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <TextField layoutX="124.0" layoutY="124.0" prefHeight="36.0" prefWidth="523.0" styleClass="tf" />
+            <Label layoutX="125.0" layoutY="80.0" text="Label">
+               <font>
+                  <Font size="13.0" />
+               </font></Label>
+            <TextField layoutX="124.0" layoutY="218.0" prefHeight="36.0" prefWidth="523.0" styleClass="tf" />
+            <TextField layoutX="124.0" layoutY="275.0" prefHeight="36.0" prefWidth="523.0" styleClass="tf" />
+            <TextField layoutX="124.0" layoutY="328.0" prefHeight="36.0" prefWidth="523.0" styleClass="tf" />
+            <TextField layoutX="124.0" layoutY="380.0" prefHeight="36.0" prefWidth="523.0" styleClass="tf" />
+            <RadioButton layoutX="125.0" layoutY="179.0" mnemonicParsing="false" text="Laki-laki" />
+            <RadioButton layoutX="209.0" layoutY="179.0" mnemonicParsing="false" text="Perempuan" />
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

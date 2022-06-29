@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<DialogPane prefHeight="450.0" prefWidth="580.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" >
+   <header>
+      <AnchorPane prefHeight="445.0" prefWidth="586.0">
+         <children>
+            <Pane prefHeight="90.0" prefWidth="593.0" styleClass="top" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="43.0" fitWidth="38.0" layoutX="203.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/icons/edit.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="257.0" layoutY="27.0" prefHeight="37.0" prefWidth="143.0" text="Update Buku" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <TextField fx:id="tf_Isbn" layoutX="155.0" layoutY="116.0" prefHeight="34.0" prefWidth="431.0" />
+            <TextField fx:id="tf_judul" layoutX="156.0" layoutY="159.0" prefHeight="34.0" prefWidth="430.0" />
+            <Label layoutX="24.0" layoutY="116.0" prefHeight="35.0" prefWidth="94.0" text="ISBN">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="24.0" layoutY="159.0" prefHeight="35.0" prefWidth="94.0" text="Judul Buku">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="24.0" layoutY="200.0" prefHeight="35.0" prefWidth="94.0" text="Penulis">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tf_penulis" layoutX="156.0" layoutY="200.0" prefHeight="34.0" prefWidth="430.0" />
+            <Label layoutX="24.0" layoutY="241.0" prefHeight="35.0" prefWidth="94.0" text="Publisher">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tf_publisher" layoutX="156.0" layoutY="241.0" prefHeight="34.0" prefWidth="430.0" />
+            <Label layoutX="24.0" layoutY="282.0" prefHeight="35.0" prefWidth="94.0" text="Kategori">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="24.0" layoutY="326.0" prefHeight="35.0" prefWidth="94.0" text="Jumlah Buku">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Spinner fx:id="spinner" editable="true" layoutX="437.0" layoutY="327.0" prefHeight="32.0" prefWidth="150.0" />
+            <ChoiceBox fx:id="choicebox" layoutX="437.0" layoutY="282.0" prefHeight="34.0" prefWidth="150.0" />
+            <Label layoutX="24.0" layoutY="365.0" prefHeight="35.0" prefWidth="94.0" text="Tahun Publish">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="datepicker" layoutX="437.0" layoutY="366.0" prefHeight="33.0" prefWidth="149.0" />
+         </children>
+      </AnchorPane>
+   </header>
+   <buttonTypes>
+      <ButtonType fx:constant="CANCEL" />
+      <ButtonType fx:constant="OK" />
+   </buttonTypes>
+</DialogPane>

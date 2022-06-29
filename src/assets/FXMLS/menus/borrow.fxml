@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assets.controllers.Borrow_controller">
+   <children>
+      <AnchorPane prefHeight="111.0" prefWidth="1462.0" styleClass="left">
+         <children>
+            <Button alignment="CENTER_RIGHT" layoutX="1293.0" layoutY="60.0" mnemonicParsing="false" onAction="#backToMenu" prefHeight="36.0" prefWidth="155.0" style="-fx-border-color: white; -fx-border-width: 1px; -fx-border-radius: 15px;" text="Back to meenu" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <ImageView fitHeight="24.0" fitWidth="32.0" layoutX="1300.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/icons/back.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="79.0" fitWidth="155.0" layoutX="14.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/icons8-borrow-book-50.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="108.0" layoutY="20.0" text="Home / Peminjaman" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <AnchorPane layoutY="112.0" prefHeight="688.0" prefWidth="1462.0" style="-fx-background-color: white;" styleClass="container">
+         <children>
+            <TabPane prefHeight="668.0" prefWidth="1462.0" style="-fx-background-color: white;" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Daftar Buku yang dipinjam">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="tabelPeminjaman" layoutY="7.0" prefHeight="645.0" prefWidth="1462.0">
+                                <columns>
+                                  <TableColumn fx:id="tc_idPeminjaman" prefWidth="164.0" text="ID Peminjaman" />
+                                  <TableColumn fx:id="tc_idBuku" prefWidth="246.0" text="ID Buku" />
+                                    <TableColumn fx:id="tc_judulBuku" prefWidth="253.0" text="Judul buku" />
+                                    <TableColumn fx:id="tc_idMember" prefWidth="172.0" text="ID Member" />
+                                    <TableColumn fx:id="tc_namaMember" prefWidth="208.0" text="Nama Member Peminjam" />
+                                    <TableColumn fx:id="tc_tanggalPeminjaman" prefWidth="248.0" text="Tanggal Peminjaman" />
+                                    <TableColumn fx:id="tc_statusPeminjaman" prefWidth="169.0" text="Status Peminjaman" />
+                                </columns>
+                              </TableView>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Buat Pinjaman">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="tf_idbuku" layoutX="13.0" layoutY="173.0" prefHeight="36.0" prefWidth="250.0" promptText="Masukkan iID Buku" style="-fx-border-radius: 15px; -fx-background-radius: 15px; -fx-border-color: white; -fx-border-width: 1px;" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" layoutX="153.0" layoutY="219.0" mnemonicParsing="false" onAction="#cariMember" prefHeight="36.0" prefWidth="111.0" style="-fx-border-color: white; -fx-border-width: 1px; -fx-border-radius: 15px;" text="Search" textFill="WHITE">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Label layoutX="63.0" layoutY="59.0" text="Buat Peminjaman">
+                                 <font>
+                                    <Font name="System Bold" size="17.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="tf_idpeminjam1" layoutX="14.0" layoutY="305.0" prefHeight="36.0" prefWidth="251.0" promptText="Masukkan id Peminjam" style="-fx-border-radius: 15px; -fx-background-radius: 15px; -fx-border-color: white; -fx-border-width: 1px;" />
+                              <Label layoutX="14.0" layoutY="280.0" text="ID member">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Button alignment="CENTER" contentDisplay="CENTER" layoutX="90.0" layoutY="542.0" mnemonicParsing="false" onAction="#buatPeminjaman" prefHeight="36.0" prefWidth="111.0" style="-fx-border-color: white; -fx-border-width: 1px; -fx-border-radius: 15px;" text="Buat Pinjaman" textFill="WHITE">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <TableView fx:id="tabel_member" layoutX="14.0" layoutY="359.0" prefHeight="159.0" prefWidth="250.0">
+                                <columns>
+                                  <TableColumn fx:id="tc_idMember2" prefWidth="87.0" text="ID Member" />
+                                  <TableColumn fx:id="tc_namaMember2" prefWidth="162.0" text="Nama" />
+                                </columns>
+                              </TableView>
+                              <TableView fx:id="tabel_daftarBuku" layoutX="293.0" layoutY="56.0" prefHeight="553.0" prefWidth="1139.0">
+                                <columns>
+                                  <TableColumn fx:id="tc_idBuku2" prefWidth="181.0" text="ID Buku" />
+                                  <TableColumn fx:id="tc_judulBuku2" prefWidth="349.0" text="Judul buku" />
+                                    <TableColumn fx:id="tc_namaPenulis2" prefWidth="275.0" text="Nama Penulis" />
+                                    <TableColumn fx:id="tc_tahunterbit2" prefWidth="197.0" text="Tahun Terbit" />
+                                    <TableColumn fx:id="tc_stockBuku2" prefWidth="136.0" text="Stok buku" />
+                                </columns>
+                              </TableView>
+                              <Label layoutX="819.0" layoutY="21.0" prefHeight="24.0" prefWidth="155.0" text="List Buku">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Buat pengembalian">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="656.0" prefWidth="1462.0">
+                           <children>
+                              <TextField fx:id="tf_idPeminjam2" layoutX="21.0" layoutY="164.0" prefHeight="36.0" prefWidth="250.0" promptText="Masukkan Id peminjam" style="-fx-border-radius: 15px; -fx-background-radius: 15px; -fx-border-color: white; -fx-border-width: 1px;" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" layoutX="160.0" layoutY="217.0" mnemonicParsing="false" onAction="#cariPeminjaman" prefHeight="36.0" prefWidth="111.0" style="-fx-border-color: white; -fx-border-width: 1px; -fx-border-radius: 15px;" text="Search" textFill="WHITE">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Label layoutX="68.0" layoutY="54.0" text="Buat Pengembalian">
+                                 <font>
+                                    <Font name="System Bold" size="17.0" />
+                                 </font>
+                              </Label>
+                              <Button alignment="CENTER" contentDisplay="CENTER" layoutX="84.0" layoutY="284.0" mnemonicParsing="false" onAction="#buatPengembalian" prefHeight="36.0" prefWidth="124.0" style="-fx-border-color: white; -fx-border-width: 1px; -fx-border-radius: 15px;" text="Buat Pengembalian" textFill="WHITE">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <TableView fx:id="pengembalian" layoutX="298.0" layoutY="54.0" prefHeight="571.0" prefWidth="1127.0">
+                                 <columns>
+                                    <TableColumn fx:id="tc_idPeminjaman3" prefWidth="181.0" text="ID_Peminjaman" />
+                                    <TableColumn fx:id="tc_judulBuku3" prefWidth="349.0" text="Judul buku" />
+                                    <TableColumn fx:id="tc_tanggalPeminjaman3" prefWidth="275.0" text="Tanggal Peminjaman" />
+                                    <TableColumn fx:id="tc_statusBuku3" prefWidth="297.0" text="Status Buku" />
+                                    <TableColumn prefWidth="36.0" />
+                                 </columns>
+                              </TableView>
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>
